@@ -12,7 +12,11 @@ You must submit to canvas the URL to your webpage (and make sure it is available
 You must also put your project URL on the spreadsheet for class demo day:
 
 You will be graded based off a combination of the following factors:
+	
 	1. Your project is within the scope of the project
+	
 	2. How well followed the above instructions were
+	
 	3. a TA evaluation of your project
+	
 	4. a small number of in-class peer evaluations (evaluations outside the in-class period will be discarded unless you talk to the TA)
