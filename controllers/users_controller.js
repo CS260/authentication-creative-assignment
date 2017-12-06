@@ -13,6 +13,8 @@ exports.signup = function(req, res){
   console.log("after hashing user exports.signup");
   user.set('email', req.body.email);
   console.log("after email user exports.signup");
+  user.set('profile_picture', req.body.profile_picture);
+  console.log("after profile_picture user exports.signup");
   user.save(function(err) {
     console.log("In exports.signup");
     console.log(err);
@@ -41,6 +43,7 @@ exports.login = function(req, res){
         req.session.username = user.username;
         req.session.msg = 'Authenticated as ' + user.username;
         req.session.color = user.color;
+        req.session.profile_picture = user.profile_picture;
         res.redirect('/');
       });
     }else{
@@ -69,12 +72,14 @@ exports.updateUser = function(req, res){
   .exec(function(err, user) {
     user.set('email', req.body.email);
     user.set('color', req.body.color);
+    user.set('profile_picture', req.body.profile_picture);
     user.save(function(err) {
       if (err){
         res.sessor.error = err;
       } else {
         req.session.msg = 'User Updated.';
         req.session.color = req.body.color;
+        req.session.profile_picture = req.body.profile_picture;
       }
       res.redirect('/user');
     });
