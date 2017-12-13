@@ -24,22 +24,26 @@
     Hobbies: 
         <%= color %>
     </span>
-    <hr>
+    <div class="divider"></div>
 
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/javascripts/jquery.js"></script>
-<h1>Share your photos</h1>
-<form id="commentForm" action="">
-<label for="name" >Name: </label><input type="text" id="name" placeholder="Name"><br>
-<label for="comment">Title: </label><input type="text" id="comment" placeholder="Comment"><br>
-<label for="avatar">Image URL: </label><input type="text" id="avatar" placeholder="URL"><br>
-</form>
-
-<button id="postComment">Post Photo</button>
-<button id="getComments">Show Photos</button>
-<button id="deleteComments">Delete All</button>
+    
+<div class="postedImageSection">
+    <h1>Share your photos</h1>
+    <form id="commentForm" action="">
+    <label for="name" >Name: </label><input type="text" id="name" placeholder="Name"><br>
+    <label for="comment">Title: </label><input type="text" id="comment" placeholder="Picture title"><br>
+    <label for="avatar">Image URL: </label><input type="text" id="avatar" placeholder="URL"><br>
+    </form>
+    <div class="imageButtons">
+        <button id="postComment">Post Photo</button>
+        <button id="getComments">Show Photos</button>
+        <button id="deleteComments">Delete All</button>
+    </div>
+</div>
 
 <br><br>
 

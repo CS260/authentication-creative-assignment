@@ -1,12 +1,10 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-/*  background-color: red;*/
 }
 
 a {
   color: #00B7FF;
-/*  background-color: red;*/
 
 }
 
@@ -14,7 +12,6 @@ label{
 	font-family: Helvetica;
 	font-weight: 400;
 	font-size: 16px;
-/*	text-transform: lowercase;*/
 
 }
 
@@ -31,7 +28,6 @@ span {
 	
 	margin-top: 20px;
 	margin-bottom: 25px;
-/*	color:white;*/
 	background: transparent;
 	border-radius:40px;
 	width:125px;
@@ -74,4 +70,197 @@ span {
 	font-weight: 800;
 	font-size: 36px;
 
+}*/
+
+
+body, html{
+
+	min-height: 100vh;
 }
+
+body{
+
+	background: rgb(31,35,60);
+	background: -moz-linear-gradient(top,  rgba(31,35,60,1) 0%, rgba(67,71,147,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(31,35,60,1)), color-stop(100%,rgba(67,71,147,1)));
+	background: -webkit-linear-gradient(top,  rgba(31,35,60,1) 0%,rgba(67,71,147,1) 100%);
+	background: -o-linear-gradient(top,  rgba(31,35,60,1) 0%,rgba(67,71,147,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(31,35,60,1) 0%,rgba(67,71,147,1) 100%);
+	background: linear-gradient(to bottom,  rgba(31,35,60,1) 0%,rgba(67,71,147,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f233c', endColorstr='#434793',GradientType=0 );
+
+	color: white;
+}
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*  background-color: red;*/
+}
+
+a {
+  color: #00B7FF;
+/*  background-color: red;*/
+
+}
+
+
+
+label{
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 16px;
+/*	text-transform: lowercase;*/
+
+}
+
+span {
+	
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+
+#email, #color,#password{
+	margin-top: 10px;
+
+}
+
+#email, #color,#password, #username{
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 12px;
+
+}
+
+
+.buttonInput {
+	
+	margin-top: 20px;
+	margin-bottom: 25px;
+	background: transparent;
+	border-radius:40px;
+	width:125px;
+	border: 2px solid #fff;
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 400ms ease;
+	color: #fff;
+}
+
+.buttonInput:hover {
+	color:rgba(31,35,60,1);
+	background: #fff;
+	transition: all 400ms ease;
+}
+
+.deleteButton{
+	margin-top: -20px;
+	background: transparent;
+	border-radius:40px;
+	width:125px;
+	border: 2px solid #fff;
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 18px;
+	transition: all 400ms ease;
+	margin-bottom: 25px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.deleteButton:hover {
+	color:rgba(31,35,60,1);
+	background: #fff;
+	transition: all 400ms ease;
+}
+
+.form-header, #welcomeText{
+	font-family: Helvetica;
+	font-weight: 800;
+	font-size: 36px;
+
+}
+
+#postComment,#getComments,#deleteComments{
+	
+	margin-top: 20px;
+	background: transparent;
+	border-radius:40px;
+	width:125px;
+	border: 2px solid #fff;
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 18px;
+	transition: all 400ms ease;
+	margin-bottom: 25px;
+	cursor: pointer;
+	color: #fff;
+
+}
+
+#postComment:hover{
+	
+	color:rgba(31,35,60,1);
+	background: #fff;
+	transition: all 400ms ease;
+
+}
+
+#getComments:hover{
+	
+	color:rgba(31,35,60,1);
+	background: #fff;
+	transition: all 400ms ease;
+
+}
+
+#deleteComments:hover{
+	
+	color:rgba(31,35,60,1);
+	background: #fff;
+	transition: all 400ms ease;
+
+}
+
+#comment, #avatar{
+
+	margin-top: 10px;
+}
+
+.postedImageSection{
+/*
+*/	display: flex;
+	flex-direction: column;
+/*	justify-content: center;*/
+	align-items:center;
+}
+
+.divider{
+	margin-top: 40px;
+	border-top: 5px solid white;
+
+}
+#comments{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+
+
+}
+
+#comments ul li{
+	list-style: none;
+}
+
+#comments img{
+
+	width:500px;
+}
+

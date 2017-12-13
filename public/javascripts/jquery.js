@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("#postComment").click(function(){
       	var myobj = {Name:$("#name").val(),Comment:$("#comment").val(),Avatar:$("#avatar").val()};
       	jobj = JSON.stringify(myobj);
-      	$("#json").text(jobj);
+      	// $("#json").text(jobj);
 
 	var url = "comment";
   	$.ajax({
