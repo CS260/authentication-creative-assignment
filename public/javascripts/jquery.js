@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
   $("#postComment").click(function(){
-      	var myobj = {Name:$("#name").val(),Comment:$("#comment").val(),Avatar:$("#avatar").val()};
+      	var myobj = {Name: $("#name").val() ,Comment:$("#comment").val(),Avatar:$("#avatar").val()};
       	jobj = JSON.stringify(myobj);
       	// $("#json").text(jobj);
 
@@ -30,7 +30,7 @@ $(document).ready(function(){
   			everything += "<li class=\'container\'> <div class=\'avatarContainer\'> <img src=\'" + com.Avatar + "\'> </div> "
         + "<div class=\'commentContainer\'> <span class=\'user\'>" + com.Name + "</span> <br> <span class='com'> " + com.Comment + "</span> </div> </li>";
   		}
-  		everything += "</ul>";
+  		everything += "</ul> ";
   		$("#comments").html(everything);
   	})
   })

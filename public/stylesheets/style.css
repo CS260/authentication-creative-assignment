@@ -136,6 +136,12 @@ span {
 	font-family: Helvetica;
 	font-weight: 400;
 	font-size: 14px;
+	text-align: center;
+}
+
+.user {
+	font-weight: 600;
+	font-size: 16px;
 }
 
 
