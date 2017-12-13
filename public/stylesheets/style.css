@@ -1,11 +1,25 @@
-/*body {
+body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+  margin-right: 30px;
+}
 
+a:hover{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+span{
+	display: flex;
+	justify-content: center;
+}
+
+img{
+	border-radius: 40px;
 }
 
 label{
@@ -22,7 +36,9 @@ span {
 	font-size: 14px;
 }
 
-
+input{
+	border-radius: 40px;
+}
 
 .buttonInput {
 	
