@@ -3,45 +3,42 @@
     
 <head>
     <title>User Login and Sessions</title>
-    <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css" />
+<!--     <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css" /> -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
 <body>  
     <div ng-controller="myController">
-        <h2 id="welcomeText">Welcome. You are Logged in as
+        <h2 id="welcomeText">Welcome
             <%= username %>
         </h2>
-        <a id="logoutLink" href="/logout">logout</a>
-        <a id="editLink" href="/user">Edit User</a>
-        <p>Place Your Code Here
-            <p>
     </div>
-    <hr>
-    <span id="indexMsg">
-        <%= msg %>
+    <span id="profile_picture">
+<!--     Profile Pic -->
+
+    <img src="<%= profile_picture %>">
+        
     </span>
-    <hr>
+    <br>
     <span id="colorText">
-    Color
+    Hobbies: 
         <%= color %>
     </span>
     <hr>
-    <span id="profile_picture">
-    Profile Pic
-        <%= profile_picture %>
-    </span>
+
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/javascripts/jquery.js"></script>
+<h1>Share your photos</h1>
 <form id="commentForm" action="">
 <label for="name" >Name: </label><input type="text" id="name" placeholder="Name"><br>
-<label for="comment">Comment: </label><input type="text" id="comment" placeholder="Comment"><br>
-<label for="avatar">Avatar URL: </label><input type="text" id="avatar" placeholder="URL"><br>
+<label for="comment">Title: </label><input type="text" id="comment" placeholder="Comment"><br>
+<label for="avatar">Image URL: </label><input type="text" id="avatar" placeholder="URL"><br>
 </form>
 
-<button id="postComment">Post Comment</button>
-<button id="getComments">Show Comments</button>
+<button id="postComment">Post Photo</button>
+<button id="getComments">Show Photos</button>
 <button id="deleteComments">Delete All</button>
 
 <br><br>
@@ -49,8 +46,10 @@
 <div id="json"></div>
 <div id="done"></div>
 <div id="comments">
-
+<hr>
 </div>
+        <a id="logoutLink" href="/logout">logout</a>
+        <a id="editLink" href="/user">Edit User</a>
 </body>
       
 </html>
