@@ -31,7 +31,7 @@ router.get('/comment', function(req,res,next) {
 router.post('/comment',function(req,res,next) {
         console.log("Comment Post");
         var newcomment = new Comment(req.body);
-        console.log(newcomment);
+        newcomment.name = req.session.username;
 	newcomment.save(function(err,post) {
                 if(err) return console.error(err);
                 console.log(post);
