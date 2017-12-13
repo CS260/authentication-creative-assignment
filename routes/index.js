@@ -1,6 +1,52 @@
 var express = require('express');
 var router = express.Router();
 var expressSession = require('express-session');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/commentDB', {useMongoClient:true});
+var commentSchema = mongoose.Schema ({
+        Name:String,
+        Comment:String,
+        Avatar:String
+});
+
+var Comment = mongoose.model('Comment', commentSchema);
+var db = mongoose.connection;
+db.on('error',console.error.bind(console,'connection error'));
+db.once('open',function(){
+        console.log("connected");
+});
+
+router.get('/comment', function(req,res,next) {
+        console.log("In the GET route?");
+        Comment.find(function(err,commentList) {
+                if(err) return console.error(err);
+                else {
+			console.log(commentList);
+                        res.json(commentList);
+                }
+        });
+});
+
+router.post('/comment',function(req,res,next) {
+        console.log("Comment Post");
+        var newcomment = new Comment(req.body);
+        console.log(newcomment);
+	newcomment.save(function(err,post) {
+                if(err) return console.error(err);
+                console.log(post);
+                res.sendStatus(200);
+        });
+});
+
+router.delete('/comment', function(req,res,next) {
+	console.log("Delete Comments");
+	Comment.find().remove(function(err){
+		if(err) return console.error(err);
+		console.log("Deleted");
+		res.sendStatus(200);
+	});
+});
 
 var users = require('../controllers/users_controller');
 console.log("before / Route");
